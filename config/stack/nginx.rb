@@ -32,7 +32,7 @@ package :passenger, :provides => :appserver do
   gem 'passenger', :version => version do    
     # Install nginx and the module
     binaries.each {|bin| post :install, "ln -s #{REE_PATH}/bin/#{bin} /usr/local/bin/#{bin}"}
-    post :install, "sudo passenger-install-nginx-module --auto --auto-download --prefix=/usr/local/nginx"
+    post :install, "passenger-install-nginx-module --auto --auto-download --prefix=/usr/local/nginx"
   end
   
   requires :ruby_enterprise
