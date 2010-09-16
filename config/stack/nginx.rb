@@ -13,9 +13,9 @@ package :nginx, :provides => :webserver do
   requires :passenger
   
   push_text File.read(File.join(File.dirname(__FILE__), 'nginx', 'init.d')), "/etc/init.d/nginx", :sudo => true do
-    post :install, "sudo chmod +x /etc/init.d/nginx"
-    post :install, "sudo /usr/sbin/update-rc.d -f nginx defaults"
-    post :install, "sudo /etc/init.d/nginx start"
+    post :install, "chmod +x /etc/init.d/nginx"
+    post :install, "/usr/sbin/update-rc.d -f nginx defaults"
+    post :install, "/etc/init.d/nginx start"
   end
   
   verify do
