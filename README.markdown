@@ -56,11 +56,11 @@ or
 * MySQL or PostgreSQL ruby database drivers (Rubygem)
 * Git (Apt)
 
-## Requirements
-* Ruby
-* Capistrano
-* Sprinkle (github.com/crafterm/sprinkle)
-* An Ubuntu or Debian based VPS
+## Requirements (versions tested as of 9/2010)
+* Ruby (1.8.7)
+* Capistrano (2.5.19)
+* Sprinkle (0.3.1)
+* An Ubuntu or Debian based VPS (Ubuntu 10.04 LTS)
 
 If you're interested in using Fedora or RedHat then maybe you should checkout one of these:
 
