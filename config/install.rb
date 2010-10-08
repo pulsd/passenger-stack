@@ -44,15 +44,15 @@ deployment do
   # source based package installer defaults
   source do
     prefix   '/usr/local'
-    archives '/usr/local/sources'
+    archives '/usr/local/src'
     builds   '/usr/local/build'
   end
 end
 
 # Depend on a specific version of sprinkle 
 begin
-  gem 'sprinkle', ">= 0.2.3" 
+  gem 'sprinkle', "~> 0.3.1" 
 rescue Gem::LoadError
-  puts "sprinkle 0.2.3 required.\n Run: `sudo gem install sprinkle`"
+  puts "sprinkle 0.3.1 required.\n Run: `sudo gem install sprinkle`"
   exit
 end
